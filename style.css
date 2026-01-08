@@ -324,6 +324,11 @@ section {
   h1 { font-size: 64px; }
   h3 { font-size: 40px; }
 
+
+  .logo {
+    display: none;
+  }
+
   .about--container, .contact-section {
     flex-direction: column;
     gap: 48px;
@@ -347,6 +352,32 @@ section {
 
   .mobile-nav-toggle {
     display: flex; /* Show toggle on mobile */
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    /* Sticky logic */
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 2000; /* High z-index to stay above gallery images */
+
+    /* Styling the button "box" so it's visible over any background */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Ensure the bars stay white */
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
   }
 
   .nav-btns-list {
