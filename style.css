@@ -44,6 +44,33 @@ button {
 
 /* NAVIGATION */
 
+#language-select {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+#language-select option {
+  background-color: #0f0f0f; /* Prevents white background on dark site */
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-lang-wrapper {
+    margin-top: 20px; /* Space it out in the mobile slide-in menu */
+  }
+
+  #language-select {
+    font-size: 18px; /* Bigger for mobile thumbs */
+    padding: 8px 16px;
+  }
+}
+
 .nav-overlay {
   position: fixed;
   top: 0;
@@ -242,6 +269,7 @@ nav {
 .price-list {
   list-style: none;
   width: 45%;
+  padding: 0;
 }
 
 .price-list li {
@@ -461,6 +489,10 @@ section {
     box-sizing: border-box;
   }
 
+  .secondary-btn {
+    margin-bottom: 24px;
+  }
+
   .hero--section {
     display: flex;
     flex-direction: column;
@@ -485,5 +517,6 @@ section {
 
   .splide-img {
     height: 350px; /* Smaller images for mobile */
+    width: 100%;
   }
 }
