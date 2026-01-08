@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Naziv Salona - Frizerske Usluge</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="nav-section">
+      <nav>
+        <p>K</p>
+        <div class="nav-overlay"></div>
+
+        <button class="mobile-nav-toggle" aria-label="Open Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <ul class="nav-btns-list">
+          <li class="nav-btn about-nav-btn" data-target="about-section">
+            O NAMA
+          </li>
+          <li class="nav-btn service-nav-btn" data-target="service-section">
+            USLUGE I CIJENE
+          </li>
+          <li class="nav-btn gallery-nav-btn" data-target="gallery-section">
+            GALERIJA
+          </li>
+          <li class="nav-btn contact-nav-btn" data-target="contact-section">
+            KONTAKT
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Hero section -->
+
+    <section class="hero--section">
+      <div class="hero--heading--container">
+        <h1>VISE OD FRIZURE</h1>
+
+        <p class="paragraph-header">FRIZERSKI SALON K</p>
+      </div>
+
+      <div class="hero--img--container">
+        <img class="hero-image" src="/images/hero.png" alt="" />
+        <div class="img-buttons-container">
+          <!-- <button class="white-cta-btn">Rezerviraj termin</button> -->
+          <a
+            class="white-cta-btn"
+            href="https://wa.me/4915233735020"
+            target="_blank"
+            >Rezerviraj termin</a
+          >
+          <button class="secondary-btn">Pogledaj usluge</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+
+    <section class="about-section">
+      <div class="about--container">
+        <div class="about--info--container">
+          <p class="paragraph-header">O NAMA</p>
+
+          <h3>FRIZERSKI SALON K - TVOJ STIL, NASA STRAST</h3>
+
+          <p class="about-paragraph">
+            Od 20XX. godine kreiramo frizure koje pričaju tvoju priču. Moderan
+            prostor u srcu grada, tim iskusnih stilista i samo premium proizvodi
+            (L’Oréal, Kérastase, Olaplex). Nije samo šišanje – to je ritual
+            ljepote.
+          </p>
+
+          <div class="radno-vrijeme-container">
+            <h5 class="radno-vrijeme-heading">RADNO VRIJEME</h5>
+            <p class="radno-vrijeme-p">Ponedjeljak - Petak: 09:00 - 19:00</p>
+            <p class="radno-vrijeme-p">Subota: 08:00 - 16:00</p>
+            <p class="radno-vrijeme-p">Nedjelja: Zatvoreno</p>
+          </div>
+        </div>
+
+        <div class="about--img--container">
+          <img class="about-img" src="/images/Aboutus.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Usluge section -->
+
+    <section class="service-section">
+      <div class="service--container">
+        <div class="service--header--container">
+          <p class="paragraph-header">USLUGE & CIJENIK</p>
+          <h3>IZABERI USLUGU I REZERVIRAJ ODMAH</h3>
+        </div>
+        <!-- <button class="white-cta-btn">Rezerviraj termin</button> -->
+        <a
+          class="white-cta-btn"
+          href="https://wa.me/4915233735020"
+          target="_blank"
+          >Rezerviraj termin</a
+        >
+      </div>
+      <div class="price--container">
+        <ul class="price-list">
+          <li>Usluga <span>Cijena</span></li>
+          <hr />
+          <li>Zensko sisanje + fen <span>23€</span></li>
+          <hr />
+          <li>Musko sisanje <span>15€</span></li>
+          <hr />
+          <li>Djecje sisanje (do 12 g.) <span>13€</span></li>
+          <hr />
+          <li>Pramenovi (balayage/ombre) <span>od 75€</span></li>
+          <hr />
+          <li>Bojanje korijena <span>35€</span></li>
+          <hr />
+          <li>Feniranje + stilzacija <span>18€</span></li>
+          <hr />
+          <li>Keratinski tretman <span>100€</span></li>
+          <hr />
+          <li>Vjencani stilovi <span>od 60€</span></li>
+          <hr />
+        </ul>
+      </div>
+    </section>
+
+    <!-- Galerija -->
+
+    <section
+      class="gallery-section splide"
+      id="image-carousel"
+      aria-label="Salon Gallery"
+    >
+      <div class="gallery--container">
+        <div class="gallery--header--container">
+          <p class="paragraph-header">GALERIJA</p>
+          <h3>POGLEDAJ SALON I NASE RADOVE</h3>
+          <p>
+            Pronadi inspiraciju, donesi ideju, a mi cemo je pretvoriti u tvoju
+            frizuru
+          </p>
+        </div>
+        <!-- <div class="splide__arrows"></div> -->
+        <div class="gallery-butons-container">
+          <button class="gallery-btn carousel-button button-left">Left</button>
+          <button class="gallery-btn carousel-button button-right">
+            Right
+          </button>
+        </div>
+      </div>
+
+      <!-- SPLIDE -->
+      <div>
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img
+                class="splide-img"
+                src="/images/Aboutus.png"
+                alt="Interior 1"
+              />
+            </li>
+            <li class="splide__slide">
+              <img
+                class="splide-img"
+                src="/images/Aboutus.png"
+                alt="Interior 2"
+              />
+            </li>
+            <li class="splide__slide">
+              <img
+                class="splide-img"
+                src="/images/Aboutus.png"
+                alt="Interior 3"
+              />
+            </li>
+            <li class="splide__slide">
+              <img
+                class="splide-img"
+                src="/images/Aboutus.png"
+                alt="Interior 4"
+              />
+            </li>
+            <li class="splide__slide">
+              <img
+                class="splide-img"
+                src="/images/Aboutus.png"
+                alt="Interior 5"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+
+    <section class="contact-section">
+      <div class="contact--container">
+        <div>
+          <p class="paragraph-header">KONTAKT</p>
+          <h3>FRIZERSKI SALON K</h3>
+        </div>
+
+        <div class="address-container">
+          <p class="address">Ulica Kralja Tomislava 25, 10000 Zagreb</p>
+          <p class="phone-number">+385 63 123 456</p>
+          <p class="email">info@frizerskisalon.hr</p>
+          <p class="website">www.frizerskisalon.hr</p>
+        </div>
+        <div class="contact-btn-container">
+          <!-- <button class="black-cta-btn">Rezerviraj termin</button> -->
+          <a
+            class="black-cta-btn"
+            href="https://wa.me/4915233735020"
+            target="_blank"
+            >Rezerviraj termin</a
+          >
+        </div>
+      </div>
+      <div class="contact--img--container">
+        <img class="about-img" src="/images/Aboutus.png" alt="" />
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

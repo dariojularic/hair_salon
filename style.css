@@ -1,0 +1,458 @@
+body {
+  margin: 0;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h3, h5, .paragraph-header {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+h1 {
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-size: 88px;
+  line-height: 100%;
+}
+
+h3 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+a {
+}
+
+
+.paragraph-header {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+section {
+  padding: 32px 64px;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* NAVIGATION */
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px); /* Optional: blurs the background */
+  z-index: 999; /* Just below the nav-btns-list */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Ensure nav-btns-list is on top of overlay */
+.nav-btns-list {
+  z-index: 1000;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  z-index: 1001; /* Above the menu */
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.nav-section {
+  background-color: #0f0f0f;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-btns-list {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-btn {
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero--section {
+  padding-bottom: 0;
+  background-color: #0f0f0f;
+
+}
+
+.hero--heading--container {
+  margin-bottom: 40px;
+}
+
+.hero--img--container {
+  position: relative;
+}
+
+.hero-image {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  bottom: -5px;
+}
+
+.img-buttons-container {
+  position: absolute;
+  bottom: 32px;
+}
+
+.white-cta-btn {
+  background-color: white;
+  border-radius: 50px;
+  padding: 12px 80px;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.black-cta-btn {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  padding: 12px 80px;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: white;
+  border-radius: 50px;
+  border: 1px solid white;
+  padding: 12px 80px;
+  font-size: 16px;
+
+}
+/* ABOUT */
+
+.about-section {
+  background-color: #ffffff;
+  color: black;
+}
+
+.about--container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about--info--container {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about--img--container{
+  height: 100%;
+  width: 40%;
+}
+
+.radno-vrijeme-container {
+  background-color: #f1eded;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 480px;
+  box-sizing: border-box;
+}
+
+.radno-vrijeme-p {
+  margin-top: 2px;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.radno-vrijeme-heading {
+  margin: 0 0 8px 0;
+}
+
+.about-img {
+  width: 100%;
+}
+
+.about-paragraph {
+  max-width: 480px;
+  font-size: 16px;
+}
+
+/* SERVICE */
+
+.service-section {
+  background-color: #0f0f0f;
+}
+
+.service--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.service--header--container, .gallery--header--container {
+  max-width: 600px;
+}
+
+.price--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 56px;
+}
+
+.price-list {
+  list-style: none;
+  width: 45%;
+}
+
+.price-list li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-list hr {
+  border: 1px solid gray;
+  margin: 16px 0;
+}
+/* GALLERY */
+
+.gallery-section {
+  background-color: #f0eded;
+  color: black;
+}
+
+.gallery-images-list {
+  list-style: none;
+}
+
+.gallery--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery-btn {
+  background-color: black;
+  color: white;
+  padding: 8px 40px;
+  border-radius: 50px;
+}
+
+.splide-img {
+  height: 600px;
+}
+
+/* CONTACT */
+
+.contact-section {
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact--container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.address-container p {
+  margin: 4px 0;
+}
+
+/* --- UPDATED BASE STYLES --- */
+
+section {
+  padding: 32px 64px;
+  box-sizing: border-box;
+}
+
+/* Ensure buttons don't overflow on tiny screens */
+.white-cta-btn, .black-cta-btn, .secondary-btn {
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  min-width: 200px; /* Adjusted from fixed padding to be safer */
+  padding: 12px 40px;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablet & Large Phones (Max 1024px) */
+@media (max-width: 1024px) {
+  h1 { font-size: 64px; }
+  h3 { font-size: 40px; }
+
+  .about--container, .contact-section {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .about--info--container, .about--img--container, .price-list {
+    width: 100%;
+  }
+
+  .service--container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+/* Mobile Phones (Max 768px) */
+@media (max-width: 768px) {
+
+
+
+  .mobile-nav-toggle {
+    display: flex; /* Show toggle on mobile */
+  }
+
+  .nav-btns-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%; /* Menu covers 70% of screen width */
+    background-color: #0f0f0f;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    z-index: 1000;
+
+    /* THE SLIDE LOGIC */
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: transform 0.5s ease-in-out;
+    box-shadow: -5px 0px 15px rgba(0,0,0,0.5);
+  }
+
+  /* When this class is added via JS, the menu slides in */
+  .nav-btns-list.active {
+    transform: translateX(0%);
+  }
+
+  /* X animation for the hamburger when active */
+  .mobile-nav-toggle.active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+  .mobile-nav-toggle.active .bar:nth-child(2) { opacity: 0; }
+  .mobile-nav-toggle.active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+
+
+
+
+
+
+
+
+  section {
+    padding: 40px 24px; /* Reduced side padding for more thumb room */
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-btns-list {
+    padding: 0;
+    font-size: 14px;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .paragraph-header {
+    text-align: center;
+  }
+
+  /* Hero adjustments */
+  .img-buttons-container {
+    position: relative; /* Move buttons below image on mobile for better visibility */
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .white-cta-btn, .secondary-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero--section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Price List */
+  .price-list {
+    width: 100%;
+  }
+
+  .price-list li {
+    font-size: 14px;
+  }
+
+  /* Gallery Header */
+  .gallery--container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .splide-img {
+    height: 350px; /* Smaller images for mobile */
+  }
+}
