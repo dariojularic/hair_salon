@@ -350,11 +350,18 @@ section {
 /* Tablet & Large Phones (Max 1024px) */
 @media (max-width: 1024px) {
   h1 { font-size: 64px; }
-  h3 { font-size: 40px; }
+  h3 {
+    font-size: 40px;
+    text-align: center;
+  }
 
 
   .logo {
     display: none;
+  }
+
+  .about-paragraph {
+    margin: 16px 0;
   }
 
   .about--container, .contact-section {
@@ -376,7 +383,13 @@ section {
 /* Mobile Phones (Max 768px) */
 @media (max-width: 768px) {
 
+  .nav-section {
+    padding: 0;
+  }
 
+  .about--info--container {
+    display: block;
+  }
 
   .mobile-nav-toggle {
     display: flex; /* Show toggle on mobile */
@@ -447,7 +460,7 @@ section {
 
 
   section {
-    padding: 40px 24px; /* Reduced side padding for more thumb room */
+    padding: 32px 24px; /* Reduced side padding for more thumb room */
   }
 
   nav {
@@ -506,6 +519,10 @@ section {
 
   .price-list li {
     font-size: 14px;
+  }
+
+  .gallery-buttons-container {
+    display: none;
   }
 
   /* Gallery Header */
