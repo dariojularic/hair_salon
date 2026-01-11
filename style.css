@@ -241,9 +241,9 @@ nav {
   object-fit: cover;
 
   /* Keep your centering hack if the parent container is constrained */
-  position: relative;
+  /* position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
 }
 
 .img-buttons-container {
