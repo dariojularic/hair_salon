@@ -271,6 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const splide = new Splide("#image-carousel", {
       type: "loop",
       perPage: 3,
+      lazyLoad: "nearby",
       autoplay: true,
       interval: 3000,
       pauseOnHover: true,
