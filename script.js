@@ -168,6 +168,8 @@
 
 import { translations } from "./translations.js";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 document.addEventListener("DOMContentLoaded", function () {
   // --- 1. SELECTORS ---
   const navBtns = document.querySelectorAll(".nav-btn");
