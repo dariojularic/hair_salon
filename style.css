@@ -50,7 +50,7 @@ button {
 
 .custom-select {
   /* background: #1a1a1a; */
-  /* border: 1px solid #444; */
+  border: 1px solid #444;
   padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
@@ -223,7 +223,7 @@ nav {
   position: relative;
 }
 
-.hero-image {
+/* .hero-image {
   width: 100vw;
   position: relative;
   left: 50%;
@@ -231,6 +231,19 @@ nav {
   margin-left: -50vw;
   margin-right: -50vw;
   bottom: -5px;
+} */
+
+.hero-image {
+  display: block; /* Removes bottom whitespace gaps */
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Adjust this to match your image's actual shape */
+  object-fit: cover;
+
+  /* Keep your centering hack if the parent container is constrained */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .img-buttons-container {
