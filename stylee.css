@@ -1,19 +1,9 @@
-body {
-  margin: 0;
-  color: #ffffff;
-  font-family: "DM Sans", sans-serif;
-  overflow-x: hidden;
-}
-
-h1, h3, h5, .paragraph-header {
+/* ========================
+   REMAINING TYPOGRAPHY
+   ======================== */
+/* h1 is defined in head. Defining remaining headers here. */
+h3, h5, .paragraph-header {
   font-family: "Red Hat Display", sans-serif;
-}
-
-h1 {
-  margin-top: 40px;
-  margin-bottom: 0;
-  font-size: 88px;
-  line-height: 100%;
 }
 
 h3 {
@@ -23,27 +13,42 @@ h3 {
   margin-bottom: 0;
 }
 
-a {
-}
-
-
 .paragraph-header {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-section {
-  padding: 32px 64px;
-  box-sizing: border-box;
-}
-
 button {
   cursor: pointer;
 }
 
-/* NAVIGATION */
+/* ========================
+   NAVIGATION (Not in head)
+   ======================== */
+.nav-section {
+  background-color: #0f0f0f;
+}
 
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-btns-list {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  padding: 0;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-btn {
+  cursor: pointer;
+}
+
+/* Language Selector */
 .custom-select-wrapper {
   position: relative;
   width: 80px;
@@ -52,8 +57,8 @@ button {
 }
 
 .custom-select {
-  /* border: 1px solid #444;
-  padding: 8px 12px; */
+  border: 1px solid #444;
+  padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
   display: flex;
@@ -64,15 +69,15 @@ button {
 .selected-content {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
 }
 
 .flag-img {
-  height: 28px;
   width: 28px;
+  height: 28px;
 }
 
+/* Dropdown Options */
 .custom-options {
   position: absolute;
   top: 110%;
@@ -110,33 +115,14 @@ button {
   background: #333;
 }
 
-#language-select {
-  background: transparent;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  padding: 4px 8px;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 14px;
+.arrow-down { font-size: 10px; }
+
+.selected-content svg, .custom-options svg {
+  display: block;
+  flex-shrink: 0;
 }
 
-#language-select option {
-  background-color: #0f0f0f; /* Prevents white background on dark site */
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .nav-lang-wrapper {
-    margin-top: 20px; /* Space it out in the mobile slide-in menu */
-  }
-
-  #language-select {
-    font-size: 18px; /* Bigger for mobile thumbs */
-    padding: 8px 16px;
-  }
-}
-
+/* Mobile Nav Overlay & Toggle */
 .nav-overlay {
   position: fixed;
   top: 0;
@@ -144,8 +130,8 @@ button {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px); /* Optional: blurs the background */
-  z-index: 999; /* Just below the nav-btns-list */
+  backdrop-filter: blur(4px);
+  z-index: 999;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
@@ -156,19 +142,13 @@ button {
   pointer-events: auto;
 }
 
-/* Ensure nav-btns-list is on top of overlay */
-.nav-btns-list {
-  z-index: 1000;
-
-}
-
 .mobile-nav-toggle {
-  display: none;
+  display: none; /* Hidden on desktop */
   flex-direction: column;
   gap: 6px;
   background: none;
   border: none;
-  z-index: 1001; /* Above the menu */
+  z-index: 1001;
 }
 
 .bar {
@@ -178,67 +158,10 @@ button {
   transition: 0.3s;
 }
 
-.nav-section {
-  background-color: #0f0f0f;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-btns-list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-
-}
-
-.nav-btn {
-  cursor: pointer;
-}
-
-/* HERO */
-
-.hero--section {
-  padding-bottom: 0;
-  background-color: #0f0f0f;
-
-}
-
-.hero--heading--container {
-  margin-bottom: 40px;
-}
-
-.hero--img--container {
-  position: relative;
-}
-
-.hero-image {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  bottom: -5px;
-}
-
-.img-buttons-container {
-  position: absolute;
-  bottom: 32px;
-}
-
-.white-cta-btn {
-  background-color: white;
-  border-radius: 50px;
-  padding: 12px 80px;
-  border: none;
-  font-size: 16px;
-  text-decoration: none;
-  color: black;
-}
+/* ========================
+   BUTTONS (Only those not in head)
+   ======================== */
+/* white-cta-btn is already in head */
 
 .black-cta-btn {
   background-color: black;
@@ -248,8 +171,7 @@ nav {
   border: none;
   font-size: 16px;
   text-decoration: none;
-  color: white;
-
+  display: inline-block;
 }
 
 .secondary-btn {
@@ -259,10 +181,11 @@ nav {
   border: 1px solid white;
   padding: 12px 80px;
   font-size: 16px;
-
 }
-/* ABOUT */
 
+/* ========================
+   ABOUT SECTION
+   ======================== */
 .about-section {
   background-color: #ffffff;
   color: black;
@@ -280,7 +203,7 @@ nav {
   gap: 40px;
 }
 
-.about--img--container{
+.about--img--container {
   height: 100%;
   width: 40%;
 }
@@ -312,8 +235,9 @@ nav {
   font-size: 16px;
 }
 
-/* SERVICE */
-
+/* ========================
+   SERVICE SECTION
+   ======================== */
 .service-section {
   background-color: #0f0f0f;
 }
@@ -344,17 +268,16 @@ nav {
 .price-list li {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #333;
-  padding-bottom: 10px; /* Space between text and the line */
-  margin-bottom: 10px;  /* Space after the line */
 }
 
 .price-list hr {
-  border: 1px solid white;
+  border: 1px solid gray;
   margin: 16px 0;
 }
-/* GALLERY */
 
+/* ========================
+   GALLERY SECTION
+   ======================== */
 .gallery-section {
   background-color: #f0eded;
   color: black;
@@ -381,8 +304,9 @@ nav {
   height: 600px;
 }
 
-/* CONTACT */
-
+/* ========================
+   CONTACT SECTION
+   ======================== */
 .contact-section {
   background-color: #ffffff;
   color: black;
@@ -401,36 +325,20 @@ nav {
   margin: 4px 0;
 }
 
-/* --- UPDATED BASE STYLES --- */
-
-section {
-  padding: 32px 64px;
-  box-sizing: border-box;
-}
-
-/* Ensure buttons don't overflow on tiny screens */
-.white-cta-btn, .black-cta-btn, .secondary-btn {
-  display: inline-block;
-  text-align: center;
-  width: auto;
-  min-width: 200px; /* Adjusted from fixed padding to be safer */
-  padding: 12px 40px;
-}
-
-/* --- RESPONSIVE MEDIA QUERIES --- */
+/* ========================
+   MEDIA QUERIES
+   ======================== */
 
 /* Tablet & Large Phones (Max 1024px) */
 @media (max-width: 1024px) {
-  h1 { font-size: 64px; }
   h3 {
-     font-size: 40px;
-
+    font-size: 40px;
+    text-align: center;
   }
 
+  .logo { display: none; }
 
-  .logo {
-    display: none;
-  }
+  .about-paragraph { margin: 16px 0; }
 
   .about--container, .contact-section {
     flex-direction: column;
@@ -443,7 +351,7 @@ section {
 
   .service--container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 24px;
   }
 }
@@ -451,65 +359,14 @@ section {
 /* Mobile Phones (Max 768px) */
 @media (max-width: 768px) {
 
-  .nav-section {
-    padding: 0;
+  /* NOTE: Section padding, H1, and Hero Layout are handled in index.html <head> */
+
+  .paragraph-header {
+    text-align: center;
   }
 
-
-  .mobile-nav-toggle {
-    display: flex; /* Show toggle on mobile */
-  }
-
-  .mobile-nav-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-
-    /* Sticky logic */
-    position: fixed;
-    top: 24px;
-    right: 24px;
-    z-index: 2000; /* High z-index to stay above gallery images */
-
-    /* Styling the button "box" so it's visible over any background */
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  /* Ensure the bars stay white */
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: 0.3s;
-  }
-
-
-
-  /* When this class is added via JS, the menu slides in */
-  .nav-btns-list.active {
-    transform: translateX(0%);
-    /* visibility: visible; */
-  }
-
-  /* X animation for the hamburger when active */
-  .mobile-nav-toggle.active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-  .mobile-nav-toggle.active .bar:nth-child(2) { opacity: 0; }
-  .mobile-nav-toggle.active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
-
-
-
-
-
-
-
-
-
-  section {
-    padding: 32px 24px; /* Reduced side padding for more thumb room */
-  }
+  /* Navigation & Menu */
+  .nav-section { padding: 0; }
 
   nav {
     flex-direction: column;
@@ -517,63 +374,73 @@ section {
     gap: 20px;
   }
 
-  /* .nav-btns-list {
+  /* Hamburger Toggle */
+  .mobile-nav-toggle {
+    display: flex;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Hamburger Animations */
+  .mobile-nav-toggle.active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+  .mobile-nav-toggle.active .bar:nth-child(2) { opacity: 0; }
+  .mobile-nav-toggle.active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+  /* The Slide-in Menu */
+  .nav-btns-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: #0f0f0f;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: -5px 0px 15px rgba(0,0,0,0.5);
     padding: 0;
     font-size: 14px;
-    gap: 12px;
     flex-wrap: wrap;
-    justify-content: center;
-  } */
+  }
 
-  h1 {
-    font-size: 48px;
+  .nav-btns-list.active {
+    transform: translateX(0%);
+  }
+
+  /* Hero Image Override */
+  .hero-image {
+    /* We override the 16/9 from <head> because it looks too thin on mobile */
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Buttons */
+  .secondary-btn, .black-cta-btn {
+    display: inline-block;
     text-align: center;
-  }
-
-  .paragraph-header {
-    text-align: center;
-  }
-
-  /* Hero adjustments */
-  .img-buttons-container {
-    position: relative; /* Move buttons below image on mobile for better visibility */
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    margin-top: 24px;
-  }
-
-  .white-cta-btn, .secondary-btn {
-    width: 100%;
+    width: auto;
+    min-width: 240px;
+    padding: 12px 40px;
     box-sizing: border-box;
   }
 
-  .secondary-btn {
-    margin-bottom: 24px;
-  }
+  /* .secondary-btn { margin-bottom: 24px; } */
 
-  .hero--section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Price List */
-  .price-list {
-    width: 100%;
-  }
-
-  .price-list li {
-    font-size: 14px;
-  }
-
-  /* Gallery Header */
-
-  .gallery-buttons-container {
-    display: none;
-  }
+  /* Gallery & Prices */
+  .about--info--container { display: block; }
+  .price-list { width: 100%; }
+  .price-list li { font-size: 14px; }
+  .gallery-buttons-container { display: none; }
 
   .gallery--container {
     flex-direction: column;
@@ -582,7 +449,8 @@ section {
   }
 
   .splide-img {
-    height: 350px; /* Smaller images for mobile */
+    height: 350px;
     width: 100%;
+    object-fit: cover;
   }
 }
