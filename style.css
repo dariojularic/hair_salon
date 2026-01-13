@@ -1,3 +1,4 @@
+/* GLOBAL */
 body {
   margin: 0;
   color: #ffffff;
@@ -21,11 +22,8 @@ h3 {
   font-weight: bold;
   margin-top: 16px;
   margin-bottom: 0;
-}
 
-a {
 }
-
 
 .paragraph-header {
   font-size: 16px;
@@ -37,6 +35,60 @@ section {
   padding: 32px 64px;
   box-sizing: border-box;
 }
+
+
+
+/* BUTTONS */
+
+.white-cta-btn {
+  background-color: white;
+  border-radius: 50px;
+  /* padding: 12px 80px; */
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.black-cta-btn {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  /* padding: 12px 80px; */
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: white;
+  border-radius: 50px;
+  border: 1px solid white;
+  /* padding: 12px 80px; */
+  font-size: 16px;
+
+}
+
+.white-cta-btn, .black-cta-btn, .secondary-btn {
+  display: inline-block;
+  text-align: center;
+  width: auto;
+}
+
+.btn {
+  width: 332px;
+  height: 54px;
+  /* padding: 12px 40px; */
+  padding: 0;
+  /* box-sizing: border-box; */
+  align-content: center;
+}
+
+
+
 
 button {
   cursor: pointer;
@@ -51,14 +103,20 @@ button {
   color: white;
 }
 
+.current-flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .custom-select {
-  /* border: 1px solid #444;
-  padding: 8px 12px; */
+  border: 1px solid #444;
+  padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .selected-content {
@@ -230,7 +288,7 @@ nav {
   bottom: 32px;
 }
 
-.white-cta-btn {
+/* .white-cta-btn {
   background-color: white;
   border-radius: 50px;
   padding: 12px 80px;
@@ -238,9 +296,9 @@ nav {
   font-size: 16px;
   text-decoration: none;
   color: black;
-}
+} */
 
-.black-cta-btn {
+/* .black-cta-btn {
   background-color: black;
   color: white;
   border-radius: 50px;
@@ -260,7 +318,7 @@ nav {
   padding: 12px 80px;
   font-size: 16px;
 
-}
+} */
 /* ABOUT */
 
 .about-section {
@@ -409,13 +467,13 @@ section {
 }
 
 /* Ensure buttons don't overflow on tiny screens */
-.white-cta-btn, .black-cta-btn, .secondary-btn {
+/* .white-cta-btn, .black-cta-btn, .secondary-btn {
   display: inline-block;
   text-align: center;
   width: auto;
-  min-width: 200px; /* Adjusted from fixed padding to be safer */
+  min-width: 200px;
   padding: 12px 40px;
-}
+} */
 
 /* --- RESPONSIVE MEDIA QUERIES --- */
 
@@ -423,7 +481,7 @@ section {
 @media (max-width: 1024px) {
   h1 { font-size: 64px; }
   h3 {
-     font-size: 40px;
+    font-size: 40px;
 
   }
 
@@ -486,6 +544,15 @@ section {
     transition: 0.3s;
   }
 
+  .service--container {
+    align-items: center;
+  }
+
+  .contact-btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
 
 
   /* When this class is added via JS, the menu slides in */
@@ -530,6 +597,10 @@ section {
     text-align: center;
   }
 
+  h3 {
+    text-align: center;
+  }
+
   .paragraph-header {
     text-align: center;
   }
@@ -545,6 +616,8 @@ section {
     margin-top: 24px;
   }
 
+  /* BUTTONS */
+
   .white-cta-btn, .secondary-btn {
     width: 100%;
     box-sizing: border-box;
@@ -552,6 +625,13 @@ section {
 
   .secondary-btn {
     margin-bottom: 24px;
+  }
+
+  .btn {
+    width: 240px;
+    height: 40px;
+    padding: 0;
+
   }
 
   .hero--section {
@@ -577,7 +657,7 @@ section {
 
   .gallery--container {
     flex-direction: column;
-    text-align: center;
+    /* text-align: center; */
     gap: 20px;
   }
 
