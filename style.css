@@ -95,10 +95,10 @@ section {
   gap: 8px;
 }
 
-.flag-svg {
+/* .flag-svg {
   height: 28px;
   width: 28px;
-}
+} */
 
 .custom-options {
   position: absolute;
