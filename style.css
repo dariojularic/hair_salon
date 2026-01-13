@@ -31,10 +31,10 @@ h3 {
   margin: 0;
 }
 
-section {
+/* section {
   padding: 32px 64px;
   box-sizing: border-box;
-}
+} */
 
 /* BUTTONS */
 
@@ -64,6 +64,10 @@ section {
 }
 
 /* NAVIGATION */
+
+header {
+  padding: 0 64px;
+}
 
 .custom-select-wrapper {
   position: relative;
@@ -195,7 +199,7 @@ section {
   gap: 6px;
   background: none;
   border: none;
-  z-index: 1001; /* Above the menu */
+  z-index: 1001;
 }
 
 .bar {
@@ -205,9 +209,9 @@ section {
   transition: 0.3s;
 }
 
-.nav-section {
+/* .nav-section {
   background-color: #0f0f0f;
-}
+} */
 
 nav {
   display: flex;
@@ -276,10 +280,10 @@ nav {
   gap: 40px;
 }
 
-.about--img--container{
+/* .about--img--container{
   height: 100%;
   width: 40%;
-}
+} */
 
 .radno-vrijeme-container {
   background-color: #f1eded;
@@ -408,15 +412,6 @@ nav {
   justify-content: center;
 }
 
-/* --- UPDATED BASE STYLES --- */
-
-section {
-  padding: 32px 64px;
-  box-sizing: border-box;
-}
-
-/* --- RESPONSIVE MEDIA QUERIES --- */
-
 /* Tablet & Large Phones (Max 1024px) */
 @media (max-width: 1024px) {
   h1 { font-size: 64px; }
@@ -448,13 +443,13 @@ section {
 
 /* Mobile Phones (Max 768px) */
 @media (max-width: 768px) {
-  .nav-section {
+  /* .nav-section {
     padding: 0;
-  }
+  } */
 
-  .mobile-nav-toggle {
-    display: flex; /* Show toggle on mobile */
-  }
+  /* .mobile-nav-toggle {
+    display: flex;
+  } */
 
   .mobile-nav-toggle {
     display: flex;
