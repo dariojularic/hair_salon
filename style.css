@@ -377,6 +377,12 @@ nav {
   height: 600px;
 }
 
+/* Reviews */
+
+.reviews-section {
+  background-color: #ffffff;
+}
+
 /* CONTACT */
 
 .contact-section {
