@@ -3,6 +3,7 @@ import "@splidejs/splide/css";
 // Option C: Core styles only (if you want to write all your own CSS)
 // import '@splidejs/splide/css/core';
 import { translations } from "../translations";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 document.addEventListener("DOMContentLoaded", function () {
   // --- 1. SELECTORS ---
