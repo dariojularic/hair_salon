@@ -1,3 +1,7 @@
+import Splide from "@splidejs/splide";
+import "@splidejs/splide/css";
+// Option C: Core styles only (if you want to write all your own CSS)
+// import '@splidejs/splide/css/core';
 import { translations } from "../translations";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -11,8 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const optionsList = document.getElementById("lang-options");
   const currentFlagBox = document.querySelector(".current-flag");
   const currentTextBox = document.querySelector(".current-text");
-  // const flags = document.querySelector(".flag-svg");
-  // console.log(flags);
 
   // --- 2. TRANSLATION LOGIC ---
   function changeLanguage(lang) {
@@ -33,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   if (initialOption) {
-    currentFlagBox.innerHTML = initialOption.querySelector(".flag-svg").outerHTML;
+    currentFlagBox.innerHTML =
+      initialOption.querySelector(".flag-svg").outerHTML;
     currentTextBox.innerText = initialOption.querySelector("span").innerText;
     changeLanguage(savedLang);
   }
@@ -47,11 +50,11 @@ document.addEventListener("DOMContentLoaded", function () {
   optionsList.querySelectorAll("li").forEach((option) => {
     option.addEventListener("click", () => {
       const lang = option.getAttribute("data-value");
+      console.log(lang, "lang");
 
       // Update Dropdown UI
-      currentFlagBox.innerHTML =
-        optionsList.querySelector(".flag-svg").outerHTML;
-      currentTextBox.innerText = optionsList.querySelector("span").innerText;
+      currentFlagBox.innerHTML = option.querySelector(".flag-svg").outerHTML;
+      currentTextBox.innerText = option.querySelector("span").innerText;
 
       // Execute translation
       changeLanguage(lang);

@@ -170,20 +170,20 @@
 
     <link rel="stylesheet" href="/src/style.css" />
 
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
       media="print"
       onload="this.media='all'"
-    />
+    /> -->
 
-    <noscript>
+    <!-- <noscript>
       <link rel="stylesheet" href="style.css" />
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
       />
-    </noscript>
+    </noscript> -->
   </head>
   <body>
     <!-- <section class="nav-section"> -->
@@ -326,7 +326,6 @@
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     aria-hidden="true"
                     role="img"
-                    class="iconify iconify--twemoji"
                     preserveAspectRatio="xMidYMid meet"
                     fill="#000000"
                     class="flag-svg"
@@ -376,6 +375,13 @@
             data-target="gallery-section"
           >
             GALERIJA
+          </li>
+          <li
+            data-i18n="nav-reviews"
+            class="nav-btn reviews-nav-btn"
+            data-target="reviews-section"
+          >
+            RECENZIJE
           </li>
           <li
             data-i18n="nav-contact"
@@ -564,35 +570,35 @@
               <li class="splide__slide">
                 <img
                   class="splide-img"
-                  data-splide-lazy="/images/Aboutus.png"
+                  data-splide-lazy="/slides/Aboutus.png"
                   alt="Interior 1"
                 />
               </li>
               <li class="splide__slide">
                 <img
                   class="splide-img"
-                  data-splide-lazy="/images/Aboutus.png"
+                  data-splide-lazy="/slides/Aboutus.png"
                   alt="Interior 2"
                 />
               </li>
               <li class="splide__slide">
                 <img
                   class="splide-img"
-                  data-splide-lazy="/images/Aboutus.png"
+                  data-splide-lazy="/slides/Aboutus.png"
                   alt="Interior 3"
                 />
               </li>
               <li class="splide__slide">
                 <img
                   class="splide-img"
-                  data-splide-lazy="/images/Aboutus.png"
+                  data-splide-lazy="/slides/Aboutus.png"
                   alt="Interior 4"
                 />
               </li>
               <li class="splide__slide">
                 <img
                   class="splide-img"
-                  data-splide-lazy="/images/Aboutus.png"
+                  data-splide-lazy="/slides/Aboutus.png"
                   alt="Interior 5"
                 />
               </li>
@@ -602,6 +608,12 @@
       </section>
 
       <section class="reviews-section">
+        <div class="reviews--header--container">
+            <p data-i18n="reviews-header" class="paragraph-header">
+              RECENZIJE
+            </p>
+            <h3 data-i18n="reviews-h3">STO NASI KLIJENTI MISLE O NAMA</h3>
+          </div>
         <div class="elfsight-widget-wrapper">
           <!-- Elfsight Google Reviews | Untitled Google Reviews -->
           <script src="https://elfsightcdn.com/platform.js" async></script>
@@ -663,10 +675,10 @@
       >
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
 
     <!-- <script type="module" src="script.js"></script> -->
     <script type="module" src="/src/main.js"></script>
-    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- <script type="module" src="/_vercel/insights/script.js"></script> -->
   </body>
 </html>

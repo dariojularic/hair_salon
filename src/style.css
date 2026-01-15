@@ -372,6 +372,21 @@ nav {
 
 /* Reviews */
 
+
+/* class="Carousel__CarouselArrowControlContainer-sc-7293b13f-9 jtAqtc es-carousel-arrow-control-container" */
+/* class="Carousel__CarouselArrowControlContainer-sc-7293b13f-9 jtAqtc es-carousel-arrow-control-container" */
+
+
+
+.es-carousel-arrow-control-container {
+  display: none;
+}
+
+.dlsxaN {
+  font-size: 40px;
+}
+
+
 .elfsight-widget-wrapper {
   width: 100%;
   max-width: 100vw;       /* Never wider than the viewport */
@@ -382,6 +397,7 @@ nav {
 
 .reviews-section {
   background-color: #ffffff;
+  color: black;
 }
 
 /* CONTACT */
@@ -450,7 +466,7 @@ nav {
 
   .hero-image {
     /* Resetting the desktop "full width" hack */
-    width: 100%;  /* Use 100% of the parent, not the viewport */
+    width: 100vw;  /* Use 100% of the parent, not the viewport */
     height: auto;
     position: static;
     left: auto;
