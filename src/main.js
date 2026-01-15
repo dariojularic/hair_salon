@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   if (initialOption) {
-    currentFlagBox.innerHTML = document.querySelector(".flag-svg").outerHTML;
-    currentTextBox.innerText = document.querySelector("span").innerText;
+    currentFlagBox.innerHTML = initialOption.querySelector(".flag-svg").outerHTML;
+    currentTextBox.innerText = initialOption.querySelector("span").innerText;
     changeLanguage(savedLang);
   }
 
@@ -49,8 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const lang = option.getAttribute("data-value");
 
       // Update Dropdown UI
-      currentFlagBox.innerHTML = document.querySelector(".flag-svg").outerHTML;
-      currentTextBox.innerText = document.querySelector("span").innerText;
+      currentFlagBox.innerHTML =
+        optionsList.querySelector(".flag-svg").outerHTML;
+      currentTextBox.innerText = optionsList.querySelector("span").innerText;
 
       // Execute translation
       changeLanguage(lang);
