@@ -157,17 +157,6 @@ header {
   color: white;
 }
 
-@media (max-width: 768px) {
-  .nav-lang-wrapper {
-    margin-top: 20px; /* Space it out in the mobile slide-in menu */
-  }
-
-  #language-select {
-    font-size: 18px; /* Bigger for mobile thumbs */
-    padding: 8px 16px;
-  }
-}
-
 .nav-overlay {
   position: fixed;
   top: 0;
@@ -383,6 +372,14 @@ nav {
 
 /* Reviews */
 
+.elfsight-widget-wrapper {
+  width: 100%;
+  max-width: 100vw;       /* Never wider than the viewport */
+  overflow-x: hidden;     /* If it tries to overflow, CUT IT OFF */
+  display: block;
+  position: relative;
+}
+
 .reviews-section {
   background-color: #ffffff;
 }
@@ -450,6 +447,30 @@ nav {
   /* .mobile-nav-toggle {
     display: flex;
   } */
+
+  .hero-image {
+    /* Resetting the desktop "full width" hack */
+    width: 100%;  /* Use 100% of the parent, not the viewport */
+    height: auto;
+    position: static;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+
+    /* Optional: Ensure object-fit is handled if you defined aspect ratio */
+    object-fit: cover;
+  }
+
+
+  .nav-lang-wrapper {
+    margin-top: 20px; /* Space it out in the mobile slide-in menu */
+  }
+
+  #language-select {
+    font-size: 18px; /* Bigger for mobile thumbs */
+    padding: 8px 16px;
+  }
 
   .mobile-nav-toggle {
     display: flex;
