@@ -1,8 +1,41 @@
 /* GLOBAL */
+
+
+
+@font-face {
+  font-family: "Red Hat Display";
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/red-hat-display-v21-latin-regular.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Red Hat Display";
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/red-hat-display-v21-latin-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/dm-sans-v17-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/dm-sans-v17-latin-700.woff2") format("woff2");
+}
+
+
+
+
 body {
   margin: 0;
   color: #ffffff;
   font-family: "DM Sans", sans-serif;
+  background-color: #0f0f0f; /* Prevents white flash */
   overflow-x: hidden;
 }
 
@@ -11,6 +44,7 @@ h1, h2, h3, .paragraph-header {
 }
 
 h1 {
+  font-family: "Red Hat Display", sans-serif;
   margin-top: 40px;
   margin-bottom: 0;
   font-size: 88px;
@@ -31,10 +65,10 @@ h2 {
   margin: 0;
 }
 
-/* section {
+section {
   padding: 32px 64px;
   box-sizing: border-box;
-} */
+}
 
 /* BUTTONS */
 
@@ -62,6 +96,28 @@ h2 {
   align-content: center;
   cursor: pointer;
 }
+
+.white-cta-btn {
+  background-color: white;
+  /* border-radius: 50px; */
+  /* padding: 12px 80px; */
+  /* width: 240px; */
+  /* height: 40px; */
+  /* font-size: 16px; */
+  text-decoration: none;
+  color: black;
+  /* display: inline-block; */
+}
+
+/* .white-cta-btn,
+.secondary-btn {
+  display: inline-block;
+  text-align: center;
+  min-width: 200px;
+  padding: 12px 40px;
+  width: 100%;
+  box-sizing: border-box;
+} */
 
 /* NAVIGATION */
 
@@ -99,10 +155,10 @@ header {
   gap: 8px;
 }
 
-/* .flag-svg {
+.flag-svg {
   height: 28px;
   width: 28px;
-} */
+}
 
 .custom-options {
   position: absolute;
@@ -224,7 +280,6 @@ nav {
 .hero--section {
   padding-bottom: 0;
   background-color: #0f0f0f;
-
 }
 
 .hero--heading--container {
@@ -243,7 +298,16 @@ nav {
   margin-left: -50vw;
   margin-right: -50vw;
   bottom: -5px;
+  /* ubacit aspect ratio */
 }
+
+/* .hero-image {
+  display: block;
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+} */
 
 .img-buttons-container {
   position: absolute;
@@ -313,7 +377,7 @@ nav {
   align-items: end;
 }
 
-.service--header--container, .gallery--header--container {
+.service--header--container, .gallery--header--container, .reviews--header--container {
   max-width: 600px;
 }
 
@@ -473,6 +537,7 @@ nav {
     right: auto;
     margin-left: 0;
     margin-right: 0;
+    aspect-ratio: 4 / 5;
 
     /* Optional: Ensure object-fit is handled if you defined aspect ratio */
     object-fit: cover;
@@ -523,6 +588,30 @@ nav {
     justify-content: center;
   }
 
+  .nav-btns-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%; /* Menu covers 70% of screen width */
+    background-color: #0f0f0f;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    z-index: 1000;
+    padding: 0;
+    font-size: 14px; /* provjerit velicinu fonta*/
+    /* gap: 12px; */
+    flex-wrap: wrap;
+
+    /* THE SLIDE LOGIC */
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    /* visibility: hidden; */
+    box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.5);
+  }
+
   /* When this class is added via JS, the menu slides in */
   .nav-btns-list.active {
     transform: translateX(0%);
@@ -558,15 +647,26 @@ nav {
   }
 
   /* Hero adjustments */
-  .img-buttons-container {
-    position: relative; /* Move buttons below image on mobile for better visibility */
+  /* .img-buttons-container {
+    position: relative;
     bottom: 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
     margin-top: 24px;
+  } */
+
+  .img-buttons-container {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
   }
+
 
   /* BUTTONS */
   .secondary-btn {
