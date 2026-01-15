@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // --- 2. TRANSLATION LOGIC ---
   function changeLanguage(lang) {
+    // ovo jos provijerit
+    document.documentElement.lang = lang;
     const elements = document.querySelectorAll("[data-i18n]");
     elements.forEach((el) => {
       const key = el.getAttribute("data-i18n");
