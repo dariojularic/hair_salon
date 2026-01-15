@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
 }
 
-h1, h3, h5, .paragraph-header {
+h1, h2, h3, .paragraph-header {
   font-family: "Red Hat Display", sans-serif;
 }
 
@@ -17,7 +17,7 @@ h1 {
   line-height: 100%;
 }
 
-h3 {
+h2 {
   font-size: 50px;
   font-weight: bold;
   margin-top: 16px;
@@ -428,7 +428,7 @@ nav {
 /* Tablet & Large Phones (Max 1024px) */
 @media (max-width: 1024px) {
   h1 { font-size: 64px; }
-  h3 {
+  h2 {
     font-size: 40px;
 
   }
@@ -549,7 +549,7 @@ nav {
     text-align: center;
   }
 
-  h3 {
+  h2 {
     text-align: center;
   }
 
