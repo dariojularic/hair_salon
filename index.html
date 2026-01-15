@@ -7,15 +7,17 @@
       rel="preload"
       fetchpriority="high"
       as="image"
-      href="/images/hero-big.webp"
+      href="/images/hero-small.webp"
       type="image/webp"
+      media="(max-width: 800px)"
     />
     <link
       rel="preload"
       fetchpriority="high"
       as="image"
-      href="/images/hero-small.webp"
+      href="/images/hero-big.webp"
       type="image/webp"
+      media="(min-width: 801px)"
     />
     <meta
       name="description"
@@ -468,7 +470,8 @@
         </div>
         <div class="elfsight-widget-wrapper">
           <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-          <script src="https://elfsightcdn.com/platform.js" async></script>
+          <!-- <script src="https://elfsightcdn.com/platform.js" async></script> -->
+          <script src="https://elfsightcdn.com/platform.js" data-use-service-core defer></script>
           <div
             class="elfsight-app-98124c4a-6ae9-4ad6-aad2-c788761aa05d"
             data-elfsight-app-lazy
