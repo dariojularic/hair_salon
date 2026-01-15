@@ -3,12 +3,29 @@ import "@splidejs/splide/css";
 // Option C: Core styles only (if you want to write all your own CSS)
 // import '@splidejs/splide/css/core';
 import { translations } from "../translations";
-import { inject } from '@vercel/analytics';
+import { inject, track } from '@vercel/analytics';
 import { injectSpeedInsights } from '@vercel/speed-insights';
 
 // Initialize Vercel tools
 inject();
 injectSpeedInsights();
+
+//
+
+
+// Track when someone clicks the "Book Appointment" button
+document.addEventListener('DOMContentLoaded', () => {
+  const bookBtn = document.querySelector('.white-cta-btn'); // Use your actual class
+
+  if (bookBtn) {
+    bookBtn.addEventListener('click', () => {
+      // This sends a custom event named "Appointment_Click" to Vercel
+      track('Appointment_Click', { location: 'Hero Section' });
+    });
+  }
+});
+
+//
 
 // ... the rest of your Splide or Language logic
 
