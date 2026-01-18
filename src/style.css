@@ -493,6 +493,25 @@ nav {
   justify-content: center;
 }
 
+.contact-svg {
+  height: 24px;
+  width: 24px;
+}
+
+.contact-link {
+  /* text-decoration: none; */
+  color: black;
+  display: flex;
+  gap: 8px;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
 /* Tablet & Large Phones (Max 1024px) */
 @media (max-width: 1024px) {
   h1 { font-size: 64px; }
